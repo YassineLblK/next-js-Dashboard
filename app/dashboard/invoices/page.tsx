@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import {lusitana} from "@/app/ui/fonts";
 import Search from "@/app/ui/search";
 import {CreateInvoice} from "@/app/ui/invoices/buttons";
@@ -6,6 +7,10 @@ import {Suspense} from "react";
 import {InvoicesTableSkeleton} from "@/app/ui/skeletons";
 import InvoicesTable from "@/app/ui/invoices/table";
 import {fetchInvoicesPages} from "@/app/lib/data";
+
+export const metadata: Metadata = {
+    title: 'Invoices',
+}
 
 export default async function Page(props: {
     searchParams?: Promise<{
